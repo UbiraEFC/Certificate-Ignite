@@ -15,11 +15,16 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
-    }, 
+    },
     iamRoleStatements: [
       {
         Effect: "Allow",
         Action: ["dynamodb:*"],
+        Resource: ["*"],
+      },
+      {
+        Effect: "Allow",
+        Action: ["s3:*"],
         Resource: ["*"],
       }
     ]
@@ -70,7 +75,7 @@ const serverlessConfiguration: AWS = {
         Type: "AWS::DynamoDB::Table",
         Properties: {
           TableName: "users_certificate",
-          ProvisionedThroughput:{
+          ProvisionedThroughput: {
             ReadCapacityUnits: 5,
             WriteCapacityUnits: 5,
           },
