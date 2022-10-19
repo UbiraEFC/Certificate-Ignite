@@ -1,3 +1,6 @@
+
+![image](https://user-images.githubusercontent.com/106639925/196720386-04fe9ef7-ba5b-422f-a1fe-48dd14b5f5b8.png)
+
 # Serverless - AWS Node.js Typescript
 
 This project has been generated using the `aws-nodejs-typescript` template from the [Serverless framework](https://www.serverless.com/).
